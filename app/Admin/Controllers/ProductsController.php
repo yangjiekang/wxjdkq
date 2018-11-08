@@ -54,7 +54,7 @@ class ProductsController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit')
+            ->header('编辑产品')
             ->description('description')
             ->body($this->form()->edit($id));
     }
@@ -68,7 +68,7 @@ class ProductsController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('Create')
+            ->header('创建产品')
             ->description('description')
             ->body($this->form());
     }
@@ -108,7 +108,13 @@ class ProductsController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new Product);
+        $form = Admin::form(Product::class, function (Form $form){
+            $form->text('title', '标题')->rules('required');
+
+            $form->image('thumbnail', '封面图片')->rules('image');
+
+            $form->editor('content', '描述')->rules('required');
+        });
 
 
 

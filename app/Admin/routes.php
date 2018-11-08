@@ -11,6 +11,12 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index');
+
+    $router->get('products/create', 'ProductsController@create');
     $router->get('products', 'ProductsController@index');
+    $router->post('products', 'ProductsController@store');
+    $router->get('products/{id}/edit', 'ProductsController@edit');
+    $router->put('products/{id}', 'ProductsController@update');
+    $router->delete('products/{id}', 'ProductsController@destroy');
 
 });
