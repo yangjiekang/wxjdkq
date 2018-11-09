@@ -27,4 +27,6 @@ Route::group([
     $router->put('articles/{id}', 'ArticlesController@update');
     $router->delete('articles/{id}', 'ArticlesController@destroy');
 
+    $router->resource('cases', 'CasesController');
+
 });

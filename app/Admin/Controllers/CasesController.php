@@ -2,16 +2,15 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Article;
+use App\Models\Cases;
 use App\Http\Controllers\Controller;
-use App\Models\Product;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
-class ArticlesController extends Controller
+class CasesController extends Controller
 {
     use HasResourceActions;
 
@@ -24,7 +23,7 @@ class ArticlesController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('文章列表')
+            ->header('案例列表')
             ->description('description')
             ->body($this->grid());
     }
@@ -80,10 +79,9 @@ class ArticlesController extends Controller
      */
     protected function grid()
     {
-        $grid = new Grid(new Article);
+        $grid = new Grid(new Cases);
 
         $grid->id('Id');
-        $grid->product()->title('分类');
         $grid->title('Title');
         $grid->content('Content');
         $grid->thumbnail('Thumbnail');
@@ -102,10 +100,9 @@ class ArticlesController extends Controller
      */
     protected function detail($id)
     {
-        $show = new Show(Article::findOrFail($id));
+        $show = new Show(Cases::findOrFail($id));
 
         $show->id('Id');
-        $show->product_id('Product id');
         $show->title('Title');
         $show->content('Content');
         $show->thumbnail('Thumbnail');
@@ -123,14 +120,9 @@ class ArticlesController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new Article);
+        $form = new Form(new Cases);
 
         $form->text('title', 'Title');
-        $products = Product::all(['id','title']);
-        $options = $products->mapWithKeys(function ($item) {
-            return [$item['id'] => $item['title']];
-        });
-        $form->select('product_id')->options($options);
         $form->editor('content', 'Content');
         $form->image('thumbnail', 'Thumbnail');
         $form->number('review', 'Review');
