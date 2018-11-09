@@ -17,7 +17,6 @@
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
-use App\Admin\Extensions\Form\CKEditor;
 use Encore\Admin\Form;
 
 Form::forget(['map']);
