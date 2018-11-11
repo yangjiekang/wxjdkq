@@ -19,4 +19,4 @@
  */
 use Encore\Admin\Form;
 
-Form::forget(['map']);
+Form::forget(['map', 'editor']);

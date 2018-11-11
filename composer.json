@@ -6,7 +6,8 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "encore/laravel-admin": "1.5.*",
+        "codingyu/ueditor": "^1.0",
+        "encore/laravel-admin": "1.6.0",
         "fideloper/proxy": "~3.3",
         "laravel-admin-ext/config": "^1.0",
         "laravel/framework": "5.5.*",
