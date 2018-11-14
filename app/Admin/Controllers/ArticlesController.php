@@ -85,7 +85,9 @@ class ArticlesController extends Controller
         $grid->id('Id');
         $grid->product()->title('分类');
         $grid->title('Title');
-        $grid->content('Content');
+        $grid->content('Content')->display(function ($content) {
+            return make_excerpt($content, 20);
+        });
         $grid->thumbnail('Thumbnail');
         $grid->review('Review');
         $grid->created_at('Created at');

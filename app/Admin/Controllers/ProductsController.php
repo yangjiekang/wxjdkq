@@ -80,9 +80,18 @@ class ProductsController extends Controller
      */
     protected function grid()
     {
-        $grid = Admin::grid(Product::class, function (Grid $grid){
-            $grid->title('产品名称');
+        $grid = new Grid(new Product());
+
+        $grid->id('Id');
+        $grid->title('Title');
+        $grid->content('Content')->display(function ($content) {
+            return make_excerpt($content, 20);
         });
+        $grid->thumbnail('Thumbnail');
+        $grid->review('Review');
+        $grid->created_at('Created at');
+        $grid->updated_at('Updated at');
+
         return $grid;
     }
 

@@ -83,7 +83,9 @@ class PagesController extends Controller
 
         $grid->id('Id');
         $grid->title('Title');
-        $grid->content('Content');
+        $grid->content('Content')->display(function ($content) {
+            return make_excerpt($content, 20);
+        });;
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
 
