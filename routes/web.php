@@ -15,4 +15,10 @@ Route::get('/', 'PagesController@root')->name('root');
 
 Auth::routes();
 
-Route::get("/products", "ProductsController@index")->name("products");
+Route::get("/services", "ProductsController@index")->name("services");
+Route::get("/about", "PagesController@about")->name("about");
+Route::get("/opening", "PagesController@opening")->name("opening");
+Route::get("/contact", "PagesController@contact")->name("contact");
+Route::get("/articles", "ArticlesController@index")->name("articles.index");
+Route::get("/articles/{product}", "ArticlesController@category")->name("articles.category");
+Route::get("/articles/{product}/{article}", "ArticlesController@show")->name("articles.show");

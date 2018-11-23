@@ -1,49 +1,43 @@
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ url('/') }}">
-                Laravel
-            </a>
-        </div>
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="{{ route('products') }}">服务项目</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <!-- 登录注册链接开始 -->
-                @guest
-                <li><a href="{{ route('login') }}">登录</a></li>
-                <li><a href="{{ route('register') }}">注册</a></li>
-                @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <span class="user-avatar pull-left" style="margin-right:8px; margin-top:-5px;">
-                                <img src="https://iocaffcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60" class="img-responsive img-circle" width="30px" height="30px">
-                            </span>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                    退出登录
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-                @endguest
-                <!-- 登录注册链接结束 -->
-            </ul>
+<header id="header" >
+    <div class="header-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
+                    <a href="{{ route('root') }}"><img src="{{ asset('img/logo.png') }}" alt="" title="" /></a>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
+                    <a class="btns" href="tel:+86 0510-82026158">+86 0510-82026158</a>
+                    <a class="btns" href="mailto:server@wxjdkq.com">server@wxjdkq.com</a>
+                    <a class="icons" href="tel:+86 15861465911">
+                        <span class="lnr lnr-phone-handset"></span>
+                    </a>
+                    <a class="icons" href="mailto:server@wxjdkq.com">
+                        <span class="lnr lnr-envelope"></span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
+    <div class="container main-menu">
+        <div class="row align-items-center justify-content-between d-flex">
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="{{ route('root') }}">首页</a></li>
+                    <li><a href="{{ route('about') }}">关于我们</a></li>
+                    <li><a href="{{ route('services') }}">服务项目</a></li>
+                    <li><a href="{{ route('opening') }}">门诊时间 </a></li>
+                    <li class="menu-has-children"><a href="{{ route('articles.index') }}">文章资讯</a>
+                        <ul>
+                            @foreach(\App\Models\Product::all() as $product)
+                            <li><a href="{{ route('articles.category', $product->slug) }}">{{ $product->title }}</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="{{ route('contact') }}">联系我们</a></li>
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+    </div>
+</header><!-- #header -->
