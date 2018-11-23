@@ -81,9 +81,11 @@ class ProductsController extends Controller
     protected function grid()
     {
         $grid = new Grid(new Product());
+        $grid->model()->orderBy('created_at', 'desc');
 
         $grid->id('Id');
         $grid->title('Title');
+        $grid->slug('Slug');
         $grid->content('Content')->display(function ($content) {
             return make_excerpt($content, 20);
         });
@@ -119,8 +121,9 @@ class ProductsController extends Controller
     {
         $form = Admin::form(Product::class, function (Form $form){
             $form->text('title', '标题')->rules('required');
+            $form->text('slug', 'slug')->rules('required');
 
-            $form->image('thumbnail', '封面图片')->rules('image');
+            $form->image('thumbnail', '封面图片')->help('请上传260 * 180 像素大小图片')->rules('image')->resize(260, 180);
 
             $form->editor('content', '描述')->rules('required');
         });

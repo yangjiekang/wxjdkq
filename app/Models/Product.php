@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class Product extends Model
 {
@@ -15,5 +17,13 @@ class Product extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    public function getImageUrlAttribute()
+    {
+        if ($this->attributes['thumbnail']){
+            return Storage::disk('public')->url($this->attributes['thumbnail']);
+        }
+        return '';
     }
 }

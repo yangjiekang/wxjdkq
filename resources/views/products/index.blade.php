@@ -32,7 +32,7 @@
                 @foreach($products as $product)
                 <div class="col-lg-3 col-md-6">
                     <div class="single-service">
-                        <img class="img-fluid" src="img/s1.jpg" alt="">
+                        <img class="img-fluid" src="{{ $product->image_url }}" alt="">
                         <a href="#"><h4>{{ $product->title }}</h4></a>
                         <p>
                             {{ make_excerpt($product->content, 150) }}

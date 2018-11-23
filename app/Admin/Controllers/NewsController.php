@@ -80,6 +80,7 @@ class NewsController extends Controller
     protected function grid()
     {
         $grid = new Grid(new News);
+        $grid->model()->orderBy('created_at', 'desc');
 
         $grid->id('Id');
         $grid->title('Title');

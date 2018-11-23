@@ -65,7 +65,7 @@
                 @foreach($services as $service)
                 <div class="col-lg-3 col-md-6">
                     <div class="single-service">
-                        <img class="img-fluid" src="{{ asset('img/s1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ $service->image_url }}" alt="">
                         <a href="#"><h4>{{ $service->title }}</h4></a>
                         <p>
                             {{ make_excerpt($service->content, 150) }}
@@ -322,7 +322,7 @@
                 @foreach($articles as $article)
                 <div class="col-lg-3 col-md-6 single-blog">
                     <div class="thumb">
-                        <img class="img-fluid" src="img/b1.jpg" alt="">
+                        <img class="img-fluid" src="{{ $article->image_url }}" alt="">
                     </div>
                     <p class="date">{{ $article->created_at }}</p>
                     <a href="{{ route('articles.show', ['product'=>$article->product->slug,'article' =>$article->id]) }}"><h4>{{ $article->title }}</h4></a>

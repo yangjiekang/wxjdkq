@@ -31,7 +31,7 @@
                     @foreach($articles as $article)
                     <div class="single-post row">
                         <div class="col-md-3">
-                             <img class="img-fluid" src="{{ asset('img/elements/d.jpg') }}" alt="">
+                             <img class="img-fluid" src="{{ $article->image_url }}" alt="">
                         </div>
                         <div class="col-md-9 ">
                             <a class="posts-title" href="{{ route('articles.show', ['product'=>$article->product->slug,'article' =>$article->id]) }}"><h3>{{ $article->title }}</h3></a>
