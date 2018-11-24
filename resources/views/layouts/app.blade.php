@@ -50,6 +50,16 @@
     <script src="{{ asset('js/jquery.nice-select.min.js') }}"></script>
     <script src="{{ asset('js/mail-script.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?60021f3d60401456c06422479e73cd5e";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
     @yield('scriptsAfterJs')
 </body>
 </html>

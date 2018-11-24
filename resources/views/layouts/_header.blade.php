@@ -33,9 +33,9 @@
                             @endforeach
                         </ul>
                     </li>
-                    <li><a href="pricing.html">牙齿矫正</a></li>
-                    <li><a href="elements.html">牙齿种植</a></li>
-                    <li><a href="elements.html">牙齿美容</a></li>
+                    <li><a href="http://p.qiao.baidu.com/cps/chat?siteId=12832735&userId=26867593" target="_blank">牙齿矫正</a></li>
+                    <li><a href="http://p.qiao.baidu.com/cps/chat?siteId=12832735&userId=26867593" target="_blank">牙齿种植</a></li>
+                    <li><a href="http://p.qiao.baidu.com/cps/chat?siteId=12832735&userId=26867593" target="_blank">牙齿美容</a></li>
                     <li><a href="{{ route('contact') }}">联系我们</a></li>
                 </ul>
             </nav><!-- #nav-menu-container -->

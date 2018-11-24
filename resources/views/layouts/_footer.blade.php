@@ -6,11 +6,11 @@
                 <div class="single-footer-widget">
                     <h6>服务</h6>
                     <ul class="footer-nav">
-                        <li><a href="#">牙齿矫正</a></li>
-                        <li><a href="#">牙齿种植</a></li>
-                        <li><a href="#">牙齿修复</a></li>
-                        <li><a href="#">牙齿美容</a></li>
-                        <li><a href="#">儿童口腔</a></li>
+                        <li><a href="http://p.qiao.baidu.com/cps/chat?siteId=12832735&userId=26867593" target="_blank">牙齿矫正</a></li>
+                        <li><a href="http://p.qiao.baidu.com/cps/chat?siteId=12832735&userId=26867593" target="_blank">牙齿种植</a></li>
+                        <li><a href="http://p.qiao.baidu.com/cps/chat?siteId=12832735&userId=26867593" target="_blank">牙齿修复</a></li>
+                        <li><a href="http://p.qiao.baidu.com/cps/chat?siteId=12832735&userId=26867593" target="_blank">牙齿美容</a></li>
+                        <li><a href="http://p.qiao.baidu.com/cps/chat?siteId=12832735&userId=26867593" target="_blank">儿童口腔</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,14 +34,3 @@
     </div>
 </footer>
 <!-- End footer Area -->
-@section('scriptsAfterJs')
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?60021f3d60401456c06422479e73cd5e";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-@endsection

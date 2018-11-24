@@ -15,7 +15,7 @@
                     <p class="text-white mx-auto">
                         优质服务贯穿诊疗全程，专业技术只为让您绽放更美丽的笑容。
                     </p>
-                    <a href="#" class="primary-btn header-btn text-uppercase mt-10">预 约</a>
+                    <a href="http://p.qiao.baidu.com/cps/chat?siteId=12832735&userId=26867593" target="_blank" class="primary-btn header-btn text-uppercase mt-10">预 约</a>
                 </div>
             </div>
         </div>
