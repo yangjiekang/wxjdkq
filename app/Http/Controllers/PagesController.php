@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Page;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,8 @@ class PagesController extends Controller
 
     public function about()
     {
-        return view('pages.about');
+        $about = Page::find(3);
+        return view('pages.about', compact('about'));
     }
 
     public function opening()

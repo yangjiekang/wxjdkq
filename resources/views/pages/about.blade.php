@@ -21,7 +21,7 @@
     <!-- Start feature Area -->
     <section class="feature-area section-gap">
         <div class="container">
-
+            {!! $about->content !!}
         </div>
     </section>
     <!-- End feature Area -->

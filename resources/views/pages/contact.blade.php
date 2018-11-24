@@ -75,3 +75,19 @@
     </section>
     <!-- End contact-page Area -->
 @stop
+<style>
+    .BMap_cpyCtrl,.anchorBL{display:none;}
+</style>
+@section('scriptsAfterJs')
+    <!-- BEGIN: PAGE SCRIPTS -->
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=Yx8KOzAZoF1zgICXxli9Aa1pGVapCekK" type="text/javascript"></script>
+    <script>
+        // 百度地图API功能
+        var map = new BMap.Map("map");    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(120.347759,31.602937),15);  // 初始化地图,设置中心点坐标和地图级别
+        map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+        map.addOverlay(new BMap.Marker(new BMap.Point(120.347759,31.602937)));
+        map.addControl(new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT}));
+        map.addControl(new BMap.NavigationControl());
+    </script>
+@stop

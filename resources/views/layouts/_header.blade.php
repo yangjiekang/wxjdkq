@@ -33,8 +33,9 @@
                             @endforeach
                         </ul>
                     </li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="pricing.html">牙齿矫正</a></li>
+                    <li><a href="elements.html">牙齿种植</a></li>
+                    <li><a href="elements.html">牙齿美容</a></li>
                     <li><a href="{{ route('contact') }}">联系我们</a></li>
                 </ul>
             </nav><!-- #nav-menu-container -->

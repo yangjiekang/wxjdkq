@@ -88,6 +88,20 @@ class PagesController extends Controller
         });;
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
+        $grid->actions(function ($actions) {
+            // 不在每一行后面展示查看按钮
+
+            // 不在每一行后面展示删除按钮
+            $actions->disableDelete();
+
+        });
+        $grid->tools(function ($tools) {
+
+            // 禁用批量删除按钮
+            $tools->batch(function ($batch) {
+                $batch->disableDelete();
+            });
+        });
 
         return $grid;
     }
