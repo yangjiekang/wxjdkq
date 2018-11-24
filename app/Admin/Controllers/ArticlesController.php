@@ -135,7 +135,7 @@ class ArticlesController extends Controller
         });
         $form->select('product_id')->options($options);
         $form->editor('content', 'Content');
-        $form->image('thumbnail', 'Thumbnail')->help('请上传260 * 180 像素大小图片')->resize(260, 180);
+        $form->image('thumbnail', 'Thumbnail')->help('请上传260 * 180 像素大小图片')->resize(260, 180)->uniqueName();
         $form->number('review', 'Review');
 
         return $form;

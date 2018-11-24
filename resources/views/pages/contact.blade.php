@@ -80,7 +80,7 @@
 </style>
 @section('scriptsAfterJs')
     <!-- BEGIN: PAGE SCRIPTS -->
-    <script src="http://api.map.baidu.com/api?v=2.0&ak=Yx8KOzAZoF1zgICXxli9Aa1pGVapCekK" type="text/javascript"></script>
+    <script src="https://api.map.baidu.com/api?v=2.0&ak=Yx8KOzAZoF1zgICXxli9Aa1pGVapCekK" type="text/javascript"></script>
     <script>
         // 百度地图API功能
         var map = new BMap.Map("map");    // 创建Map实例
