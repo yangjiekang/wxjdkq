@@ -7,13 +7,13 @@
                 </div>
                 <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
                     <a class="btns" href="tel:+86 0510-82026158">+86 0510-82026158</a>
-                    <a class="btns" href="mailto:server@wxjdkq.com">server@wxjdkq.com</a>
+                    {{--<a class="btns" href="mailto:server@wxjdkq.com">server@wxjdkq.com</a>--}}
                     <a class="icons" href="tel:+86 15861465911">
                         <span class="lnr lnr-phone-handset"></span>
                     </a>
-                    <a class="icons" href="mailto:server@wxjdkq.com">
-                        <span class="lnr lnr-envelope"></span>
-                    </a>
+                    {{--<a class="icons" href="mailto:server@wxjdkq.com">--}}
+                        {{--<span class="lnr lnr-envelope"></span>--}}
+                    {{--</a>--}}
                 </div>
             </div>
         </div>

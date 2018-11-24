@@ -44,15 +44,15 @@
                             <p>周一到周日 09:00 ~ 18:00</p>
                         </div>
                     </div>
-                    <div class="single-contact-address d-flex flex-row">
-                        <div class="icon">
-                            <span class="lnr lnr-envelope"></span>
-                        </div>
-                        <div class="contact-details">
-                            <h5>server@wxjdkq.com</h5>
-                            <p>欢迎您的咨询!</p>
-                        </div>
-                    </div>
+                    {{--<div class="single-contact-address d-flex flex-row">--}}
+                        {{--<div class="icon">--}}
+                            {{--<span class="lnr lnr-envelope"></span>--}}
+                        {{--</div>--}}
+                        {{--<div class="contact-details">--}}
+                            {{--<h5>server@wxjdkq.com</h5>--}}
+                            {{--<p>欢迎您的咨询!</p>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
                 {{--<div class="col-lg-8">--}}
                     {{--<form class="form-area " id="myForm" action="" method="post" class="contact-form text-right">--}}
