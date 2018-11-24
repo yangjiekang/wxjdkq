@@ -8,15 +8,15 @@
     <!-- Author Meta -->
     <meta name="author" content="colorlib">
     <!-- Meta Description -->
-    <meta name="description" content="">
+    <meta name="description" content="{{ config('web_description') }}">
     <!-- Meta Keyword -->
-    <meta name="keywords" content="">
+    <meta name="keywords" content="{{ config('web_keywords') }}">
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Site Title -->
-    <title>@yield('title', '嘉德口腔') - 嘉德口腔</title>
+    <title>@yield('title', '嘉德口腔') - {{ config('web_title') }}</title>
 
     <!--
     CSS

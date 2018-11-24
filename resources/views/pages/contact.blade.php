@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '门诊时间')
+@section('title', '联系我们')
 
 @section('content')
     <!-- start banner Area -->

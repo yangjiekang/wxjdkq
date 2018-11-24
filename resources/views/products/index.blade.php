@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '产品列表')
+@section('title', '服务项目')
 
 @section('content')
     <!-- start banner Area -->
