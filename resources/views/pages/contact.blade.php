@@ -54,22 +54,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8">
-                    <form class="form-area " id="myForm" action="" method="post" class="contact-form text-right">
-                        <div class="row">
-                            <div class="col-lg-6 form-group">
-                                <textarea class="common-textarea form-control" name="message" placeholder="内容" onfocus="this.placeholder = ''" onblur="this.placeholder = '内容'" required=""></textarea>
-                            </div>
-                            <div class="col-lg-6 form-group">
-                                <input name="name" placeholder="姓名" onfocus="this.placeholder = ''" onblur="this.placeholder = '姓名'" class="common-input mb-20 form-control" required="" type="text">
+                {{--<div class="col-lg-8">--}}
+                    {{--<form class="form-area " id="myForm" action="" method="post" class="contact-form text-right">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-lg-6 form-group">--}}
+                                {{--<textarea class="common-textarea form-control" name="message" placeholder="内容" onfocus="this.placeholder = ''" onblur="this.placeholder = '内容'" required=""></textarea>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-lg-6 form-group">--}}
+                                {{--<input name="name" placeholder="姓名" onfocus="this.placeholder = ''" onblur="this.placeholder = '姓名'" class="common-input mb-20 form-control" required="" type="text">--}}
 
-                                <input name="email" placeholder="电话" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = '电话'" class="common-input mb-20 form-control" required="" type="text">
+                                {{--<input name="email" placeholder="电话" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = '电话'" class="common-input mb-20 form-control" required="" type="text">--}}
 
-                                <button class="genric-btn primary circle" style="float: right;">提交</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                                {{--<button class="genric-btn primary circle" style="float: right;">提交</button>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</form>--}}
+                {{--</div>--}}
             </div>
         </div>
     </section>

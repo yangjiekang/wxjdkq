@@ -34,3 +34,14 @@
     </div>
 </footer>
 <!-- End footer Area -->
+@section('scriptsAfterJs')
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?60021f3d60401456c06422479e73cd5e";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+@endsection
