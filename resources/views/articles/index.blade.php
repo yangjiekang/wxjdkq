@@ -34,7 +34,7 @@
                              <img class="img-fluid" src="{{ $article->image_url }}" alt="">
                         </div>
                         <div class="col-md-9 ">
-                            <a class="posts-title" href="{{ route('articles.show', ['product'=>$article->product->slug,'article' =>$article->id]) }}"><h3>{{ $article->title }}</h3></a>
+                            <a class="posts-title" href="{{ $article->link() }}"><h3>{{ $article->title }}</h3></a>
                             <p class="excert">
                                 {{ make_excerpt($article->content, 230) }}
                             </p>

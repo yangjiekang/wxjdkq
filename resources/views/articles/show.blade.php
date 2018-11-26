@@ -11,7 +11,7 @@
                     <h1 class="text-white">
                         文章资讯
                     </h1>
-                    <p class="text-white link-nav"><a href="{{ route('root') }}">首页 </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{{ route('articles.index') }}"> 文章资讯</a><span class="lnr lnr-arrow-right"></span> <a href="{{ route('articles.show', [$article->product->slug, $article->id]) }}"> {{ $article->title }}</a>
+                    <p class="text-white link-nav"><a href="{{ route('root') }}">首页 </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{{ route('articles.index') }}"> 文章资讯</a><span class="lnr lnr-arrow-right"></span> <a href="{{ $article->link() }}"> {{ $article->title }}</a>
                     </p>
                 </div>
             </div>

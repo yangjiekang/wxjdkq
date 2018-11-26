@@ -22,6 +22,10 @@ class ArticlesController extends Controller
 
     public function show(Request $request, Product $product, Article $article)
     {
+        // URL 矫正
+        if (! empty($article->slug) && $article->slug != $request->slug){
+            return redirect($article->link(), 301);
+        }
         return view('articles.show', compact('article'));
     }
 }

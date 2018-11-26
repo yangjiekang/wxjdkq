@@ -17,6 +17,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('product_id');
             $table->string('title');
+            $table->string('slug')->nullable();
             $table->text('content');
             $table->string('thumbnail')->nullable();
             $table->integer('review')->default(0);

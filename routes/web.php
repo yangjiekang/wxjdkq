@@ -21,4 +21,4 @@ Route::get("/opening", "PagesController@opening")->name("opening");
 Route::get("/contact", "PagesController@contact")->name("contact");
 Route::get("/articles", "ArticlesController@index")->name("articles.index");
 Route::get("/articles/{product}", "ArticlesController@category")->name("articles.category");
-Route::get("/articles/{product}/{article}", "ArticlesController@show")->name("articles.show");
+Route::get("/articles/{product}/{article}/{slug?}", "ArticlesController@show")->name("articles.show");

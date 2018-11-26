@@ -86,6 +86,7 @@ class ArticlesController extends Controller
         $grid->id('Id');
         $grid->product()->title('分类');
         $grid->title('Title');
+        $grid->slug('Slug');
         $grid->content('Content')->display(function ($content) {
             return make_excerpt($content, 20);
         });
@@ -129,6 +130,7 @@ class ArticlesController extends Controller
         $form = new Form(new Article);
 
         $form->text('title', 'Title');
+        $form->text('slug', 'Slug');
         $products = Product::all(['id','title']);
         $options = $products->mapWithKeys(function ($item) {
             return [$item['id'] => $item['title']];

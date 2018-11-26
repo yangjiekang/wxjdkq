@@ -30,4 +30,9 @@ class Article extends Model
         $path = $files[array_rand($files)];
         return Storage::disk('public')->url($path);
     }
+
+    public function link($params = [])
+    {
+        return route('articles.show', array_merge([$this->product->slug, $this->id, $this->slug], $params));
+    }
 }
