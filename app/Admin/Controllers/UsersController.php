@@ -94,7 +94,7 @@ class UsersController extends Controller
         $grid->tel('电话');
         $grid->address('地址');
         $grid->note('备注');
-        $grid->created_at('创建事假');
+        $grid->created_at('创建时间');
         $grid->updated_at('更新时间');
 
         return $grid;
@@ -134,14 +134,13 @@ class UsersController extends Controller
     {
         $form = new Form(new User);
 
-        $form->text('name', 'Name');
-        $form->email('email', 'Email');
-        $form->password('password', 'Password');
-        $form->text('remember_token', 'Remember token');
-        $form->text('realname', 'Realname');
-        $form->text('tel', 'Tel');
-        $form->text('address', 'Address');
-        $form->textarea('note', 'Note');
+        $form->text('name', '用户名');
+        $form->email('email', '邮箱');
+        $form->password('password', '密码');
+        $form->text('realname', '真实姓名');
+        $form->text('tel', '电话');
+        $form->text('address', '地址');
+        $form->textarea('note', '备注');
 
         return $form;
     }
