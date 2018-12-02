@@ -18,5 +18,6 @@ Route::group([
     $router->resource('cases', 'CasesController');
     $router->resource('news', 'NewsController');
     $router->resource('pages', 'PagesController');
+    $router->resource('users', 'UsersController');
 
 });

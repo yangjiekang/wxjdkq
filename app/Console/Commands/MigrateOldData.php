@@ -22,6 +22,8 @@ class MigrateOldData extends Command
      */
     protected $description = 'migration old database';
 
+    protected $oldDatabase;
+
     /**
      * Create a new command instance.
      *
@@ -30,6 +32,8 @@ class MigrateOldData extends Command
     public function __construct()
     {
         parent::__construct();
+//        $this->info('连接老数据库');
+        $this->oldDatabase = DB::connection('mysql_old');
     }
 
     /**
@@ -39,10 +43,23 @@ class MigrateOldData extends Command
      */
     public function handle()
     {
-        $this->info('连接老数据库');
-        $oldDatabase = DB::connection('mysql_old');
+//        $this->products();
+//
+//        $this->cases();
+//
+//        $this->news();
+//
+//        $this->articles();
+//
+//        $this->pages();
+
+        $this->users();
+    }
+
+    public function products()
+    {
         $this->info('开始迁移产品表数据');
-        $oldProducts = $oldDatabase->select("select * from product");
+        $oldProducts = $this->oldDatabase->select("select * from product");
         $products = [];
         foreach ($oldProducts as $old) {
             $products[] = [
@@ -56,9 +73,12 @@ class MigrateOldData extends Command
         }
         DB::table('products')->insert($products);
         $this->info('迁移产品表数据成功');
+    }
 
+    public function cases()
+    {
         $this->info('开始迁移案例表数据');
-        $oldCases = $oldDatabase->select("select * from cases");
+        $oldCases = $this->oldDatabase->select("select * from cases");
         $cases = [];
         foreach ($oldCases as $old) {
             $cases[] = [
@@ -72,9 +92,12 @@ class MigrateOldData extends Command
         }
         DB::table('cases')->insert($cases);
         $this->info('迁移案例表数据成功');
+    }
 
+    public function news()
+    {
         $this->info('开始迁移新闻表数据');
-        $oldNews = $oldDatabase->select("select * from news");
+        $oldNews = $this->oldDatabase->select("select * from news");
         $news = [];
         foreach ($oldNews as $old) {
             $news[] = [
@@ -88,9 +111,12 @@ class MigrateOldData extends Command
         }
         DB::table('news')->insert($news);
         $this->info('迁移新闻数据成功');
+    }
 
+    public function articles()
+    {
         $this->info('开始迁移文章表数据');
-        $oldArticles = $oldDatabase->select("select * from articles");
+        $oldArticles = $this->oldDatabase->select("select * from articles");
         $articles = [];
         foreach ($oldArticles as $old) {
             $articles[] = [
@@ -105,9 +131,12 @@ class MigrateOldData extends Command
         }
         DB::table('articles')->insert($articles);
         $this->info('迁移文章数据成功');
+    }
 
+    public function pages()
+    {
         $this->info('开始迁移页面表数据');
-        $oldPages = $oldDatabase->select("select * from company");
+        $oldPages = $this->oldDatabase->select("select * from company");
         $pages = [];
         foreach ($oldPages as $old) {
             $pages[] = [
@@ -120,5 +149,27 @@ class MigrateOldData extends Command
         }
         DB::table('pages')->insert($pages);
         $this->info('迁移页面表数据成功');
+    }
+
+    public function users()
+    {
+        $this->info('开始迁移用户表数据');
+        $oldUsers = $this->oldDatabase->select("select * from user");
+        $users = [];
+        foreach ($oldUsers as $old) {
+            $users[] = [
+                "name" => $old->username,
+                "email" => $old->id.'@qq.com',
+                "password" => encrypt('123456'),
+                "realname" => $old->realname,
+                "tel" => $old->tel,
+                "address" => $old->address,
+                "note" => $old->diagnosis,
+                "created_at" => Carbon::createFromDate(),
+                "updated_at" => Carbon::createFromDate()
+            ];
+        }
+        DB::table('users')->insert($users);
+        $this->info('迁移用户数据成功');
     }
 }
